@@ -1,0 +1,35 @@
+
+.Responsive {
+    display: flex; /* Utiliza flexbox para el layout */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a múltiples líneas */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 50px; /* Espacio entre imágenes */
+    max-width: 700px; /* ancho */
+    margin: 0 auto; /* centro de pagina */
+}
+
+/* Estilos para las imágenes de la galería */
+.Responsive img {
+    width: 23%; /* Cada imagen ocupará aproximadamente un 23% del ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Asegura que la imagen cubra su área sin distorsionarse */
+    border-radius: 5px; /* Bordes redondeados en las imágenes */
+    box-shadow: 0px 2px 5px rgb(0, 255, 106); /* Sombra suave en las imágenes */
+    transition: all 0.30s ease; /* Transición suave para efectos */
+}
+
+
+.Responsive img:hover {
+    transform: scale(1.50); /* aumenta el tamaño de la imagen*/
+}
+@media (max-width: 768px) {
+    .Responsive img {
+        width: 768%; /* Dos imágenes por fila en tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .Responsive img {
+        width: 95%; /* Una imagen por fila en móviles */
+    }
+}
